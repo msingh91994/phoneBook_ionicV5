@@ -1,0 +1,8 @@
+{
+  "appId": "com.softlearn.learnsolo",
+  "appName": "PhoneBook",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
