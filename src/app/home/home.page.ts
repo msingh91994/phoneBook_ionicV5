@@ -44,7 +44,7 @@ export class HomePage {
     this.storage.get('loggedInUser').then((val) => {
       if (val)
         this.getEditForm = val[0]
-      console.log(this.getEditForm)
+      //console.log(this.getEditForm)
     });
   }
 
