@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{pageName}}</ion-title>
+
+    <ion-buttons *ngIf="pageName == 'Contact Detail'" slot="end">
+      <ion-button (click)="_deleteContact()" >
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form [formGroup]="newContact" (ngSubmit)="_saveContact()">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Create contact</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input type="text" formControlName="firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Last name</ion-label>
+        <ion-input type="text" formControlName="lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mobile No.</ion-label>
+        <ion-input type="tel" formControlName="mobileNo"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button (click)="_saveContact()" expand="block" shape="round" [class.active]="newContact?.valid"
+      [disabled]="!newContact?.valid">
+      {{buttonName}} </ion-button>
+  </form>
+</ion-content>

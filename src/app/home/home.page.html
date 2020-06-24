@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> -->
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center" color="neumorphism" [fullscreen]="true" >
+
+  <ion-button (click)="_addContacts()">
+    <ion-icon slot="start" name="add"></ion-icon>
+    Add Contact
+  </ion-button>
+
+  <ion-button (click)="_contactList()">
+    <ion-icon slot="start" name="book-outline"></ion-icon>
+    View Contact List
+  </ion-button>
+
+  <!-- <form [formGroup]="editForm" (ngSubmit)="editForm()">
+    <ion-item>
+      <ion-label>Name :</ion-label>
+      <ion-input type="text" class="user-input" [(ngModel)]="getEditForm.name" placeholder="name"
+        formControlName="name">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email :</ion-label>
+      <span class="color-gray" placeholder="email">{{getEditForm.email}}</span>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password :</ion-label>
+      <ion-input type="text" class="pass-input" [(ngModel)]="getEditForm.password" placeholder="password"
+        formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Confirm Password :</ion-label>
+      <ion-input type="password" class="pass-input" [(ngModel)]="getEditForm.confirmPassword"
+        placeholder=" confirm password" formControlName="confirmPassword">
+      </ion-input>
+    </ion-item>
+
+  </form>
+  <ion-button (click)="saveEditDetail()" shape="round">
+    save Details
+  </ion-button> -->
+</ion-content>
+<!-- <ion-footer>
+  <ion-button (click)="logOut()" shape="round">
+    LogOut
+  </ion-button>
+</ion-footer> -->
